@@ -17,22 +17,23 @@
 
     .card {
       background: white;
-      padding: 30px;
+      padding: 20px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
       text-align: center;
-      max-width: 500px;
+      max-width: 90%;   /* se adapta a móvil */
       position: relative;
       z-index: 2;
     }
 
     .card h1 {
       color: #e63946;
+      font-size: 24px;
     }
 
     .card p {
       margin: 15px 0;
-      font-size: 18px;
+      font-size: 16px;  /* más cómodo en celular */
       line-height: 1.6;
       color: #333;
     }
@@ -71,37 +72,54 @@
       50% { opacity: 1; }
       100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
     }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #e63946;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #d62828;
+    }
   </style>
 </head>
 <body>
-      <div class="card">
-      <h1>Feliz San Valentín 💕</h1>
-      <p>
-        Mi conejita preciosa 🐰💖, tú eres mi cielo, mi mundo, mi reina, mi vida, mi amor, mi todo 🌎💍💕
-        Eres tan única, tan loca y divertida 🤪💞, que cada día me sorprendes más y más. 
-        Me encanta cómo eres de cariñosa, simpática, berrinchuda cuando quieres que te consienta 😅💗, 
-        peleona porque te gusta ganar en los “te amoooooo” ❤️, y tóxica porque yo soy tuyo y tú mía 💍❣️
-      </p>
-      <p>
-        Aunque la distancia nos separe 🌍, siento que estás conmigo en cada instante 💓
-        No importa cuántos kilómetros haya, porque mi corazón late contigo siempre 💖✨
-        Sueño con el momento en que nuestras miradas se crucen por primera vez 👀💫, 
-        y pueda abrazarte fuerte y decirte frente a frente todo lo que hoy escribo aquí 🤲💕
-      </p>
-      <p>
-        Gracias por existir 🌹, por ser mi caja de sorpresas 🎁, por darme la esperanza de un futuro juntos 
-        y por llenar mi vida de luz 🌟. Este San Valentín es solo un recordatorio de que nuestro amor 
-        sigue creciendo y fortaleciéndose 💪❤️. Te prometo que cada kilómetro recorrido valdrá la pena 
-        cuando finalmente estemos uno al lado del otro 🚀💞.
-      </p>
-      <p>
-        Te amoooooooooooooooooooooooooo con todo 😌❤️💍💞💖😘💕💝❣️💗💗💗  
-        Siempre tuyo 💌💕
-      </p>
-    </div>
-    <audio autoplay loop>
+  <div class="card">
+    <h1>Feliz San Valentín 💕</h1>
+    <p>
+      Mi conejita preciosa 🐰💖, tú eres mi cielo, mi mundo, mi reina, mi vida, mi amor, mi todo 🌎💍💕
+      Eres tan única, tan loca y divertida 🤪💞, que cada día me sorprendes más y más. 
+      Me encanta cómo eres de cariñosa, simpática, berrinchuda cuando quieres que te consienta 😅💗, 
+      peleona porque te gusta ganar en los “te amoooooo” ❤️, y tóxica porque yo soy tuyo y tú mía 💍❣️
+    </p>
+    <p>
+      Aunque la distancia nos separe 🌍, siento que estás conmigo en cada instante 💓
+      No importa cuántos kilómetros haya, porque mi corazón late contigo siempre 💖✨
+      Sueño con el momento en que nuestras miradas se crucen por primera vez 👀💫, 
+      y pueda abrazarte fuerte y decirte frente a frente todo lo que hoy escribo aquí 🤲💕
+    </p>
+    <p>
+      Gracias por existir 🌹, por ser mi caja de sorpresas 🎁, por darme la esperanza de un futuro juntos 
+      y por llenar mi vida de luz 🌟. Este San Valentín es solo un recordatorio de que nuestro amor 
+      sigue creciendo y fortaleciéndose 💪❤️. Te prometo que cada kilómetro recorrido valdrá la pena 
+      cuando finalmente estemos uno al lado del otro 🚀💞.
+    </p>
+    <p>
+      Te amoooooooooooooooooooooooooo con todo 😌❤️💍💞💖😘💕💝❣️💗💗💗  
+      Siempre tuyo 💌💕
+    </p>
+
+    <!-- Música -->
+    <audio id="musica" loop>
       <source src="Confieso.mp3" type="audio/mpeg">
     </audio>
+    <button onclick="document.getElementById('musica').play()">▶️ Reproducir nuestra canción</button>
   </div>
 
   <script>
